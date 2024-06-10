@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wbt1gf5yb-python-gitops
+  description: This is GitOps manifest for wbt1gf5yb-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: wbt1gf5yb-python
+    janus-idp.io/tekton: wbt1gf5yb-python 
+    backstage.io/kubernetes-id: wbt1gf5yb-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wbt1gf5yb-python
